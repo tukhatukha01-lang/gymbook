@@ -1,0 +1,14 @@
+{
+  "name": "gymbook",
+  "version": "1.1.0",
+  "private": true,
+  "description": "GymBook — офлайн-дневник тренировок и питания (PWA)",
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "check": "node scripts/check.js",
+    "zip": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/make-zip.ps1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

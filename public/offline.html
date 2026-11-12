@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0e15">
+<title>GymBook — нет соединения</title>
+<style>
+:root{--o:#f4511e;--bg:#f4f6fb;--card:#fff;--tx:#171c2b;--mut:#8b91a7}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--tx);
+ min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center}
+.card{background:var(--card);border-radius:24px;box-shadow:0 12px 34px rgba(23,28,43,.1);padding:34px 26px;max-width:420px;width:100%}
+.logo{font-size:30px;font-weight:800;margin-bottom:8px}
+.logo i{color:var(--o);font-style:normal}
+h1{font-size:19px;margin:14px 0 8px}
+p{font-size:14px;color:var(--mut);line-height:1.6}
+button{margin-top:22px;width:100%;padding:14px;border:none;border-radius:14px;cursor:pointer;
+ font:inherit;font-weight:800;color:#fff;background:linear-gradient(120deg,var(--o),#ff8a50)}
+a{display:inline-block;margin-top:14px;color:var(--o);font-weight:700;text-decoration:none;font-size:13px}
+</style>
+</head>
+<body>
+<main class="card">
+ <div class="logo">Gym<i>Book</i></div>
+ <h1>Нет соединения с интернетом</h1>
+ <p>Приложение уже сохранено на устройстве. Проверьте сеть и попробуйте открыть его снова.</p>
+ <button type="button" onclick="location.reload()">Повторить</button>
+ <a href="./">Открыть GymBook</a>
+</main>
+</body>
+</html>

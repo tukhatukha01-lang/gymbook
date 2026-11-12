@@ -1,0 +1,85 @@
+{
+  "id": "./",
+  "name": "GymBook — дневник тренировок и питания",
+  "short_name": "GymBook",
+  "description": "Офлайн-дневник тренировок, питания и прогресса: готовые программы, прогрессия нагрузки, счётчик калорий.",
+  "lang": "ru",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "portrait-primary",
+  "background_color": "#0b0e15",
+  "theme_color": "#0b0e15",
+  "categories": [
+    "health",
+    "fitness",
+    "lifestyle"
+  ],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Тренировка",
+      "short_name": "Тренировка",
+      "description": "Открыть сегодняшнюю тренировку",
+      "url": "./#work",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Дневник еды",
+      "short_name": "Питание",
+      "description": "Добавить приём пищи",
+      "url": "./#food",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Прогресс",
+      "short_name": "Прогресс",
+      "description": "Статистика, рекорды и календарь",
+      "url": "./#stat",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+.git
+.gitignore
+gymbook_release
+dist
+*.zip
+*.md
+node_modules
+.DS_Store
+Thumbs.db
