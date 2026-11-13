@@ -112,6 +112,9 @@ output directory — `public`.
 
 ## 5. GitHub Pages
 
+Сайт уже опубликован: **https://tukhatukha01-lang.github.io/gymbook/**
+(репозиторий `tukhatukha01-lang/gymbook`, ветка `gh-pages`).
+
 Сайт публикуется из ветки `gh-pages`: в ней лежит содержимое `public/` в корне.
 Actions не используются, поэтому токену не нужен scope `workflow`.
 

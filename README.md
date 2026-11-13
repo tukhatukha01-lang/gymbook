@@ -1,5 +1,8 @@
 # GymBook 1.1 — готово к деплою
 
+**Живой сайт:** https://tukhatukha01-lang.github.io/gymbook/
+**Репозиторий:** https://github.com/tukhatukha01-lang/gymbook
+
 Офлайн-дневник тренировок и питания: один HTML-файл с приложением, PWA-манифест,
 service worker и локальные шрифты. Никакого бэкенда и сборки — только статика.
 
@@ -58,8 +61,18 @@ Node.js 18+ (уже установлен). Внешние пакеты не ну
 
 ## Деплой
 
-- [DEPLOY.md](DEPLOY.md) — Railway, Docker, Netlify, Cloudflare Pages, GitHub Pages, VPS.
-- Быстро: `railway init`, затем `railway up` в этой папке (подробности в DEPLOY.md).
+Опубликовано на GitHub Pages из ветки `gh-pages`:
+**https://tukhatukha01-lang.github.io/gymbook/**
+
+```powershell
+npm run deploy        # public/ → ветка gh-pages
+```
+
+- [DEPLOY.md](DEPLOY.md) — GitHub Pages, Railway, Docker, Netlify, Cloudflare Pages, VPS.
+- Railway: `railway up -y` в этой папке (подробности в DEPLOY.md).
+
+Обновление сайта: `git push` для исходников и `npm run deploy` для статики.
+Не забывайте поднимать `VERSION` в `public/sw.js` — иначе у пользователей останется старый кэш.
 
 ## Версия
 
