@@ -112,25 +112,37 @@ output directory — `public`.
 
 ## 5. GitHub Pages
 
-В проекте уже есть workflow `.github/workflows/pages.yml`: при пуше в `main` он проверяет
-сборку и публикует содержимое `public/` на GitHub Pages.
+Сайт публикуется из ветки `gh-pages`: в ней лежит содержимое `public/` в корне.
+Actions не используются, поэтому токену не нужен scope `workflow`.
 
 ```powershell
 cd C:\Users\tukha\gymbook
-gh auth login
+gh auth login                                  # один раз
 gh repo create gymbook --public --source . --remote origin
-gh api --method POST repos/{owner}/gymbook/pages -f build_type=workflow
-git push -u origin main
-gh run watch
+git push -u origin main                        # исходники
+npm run deploy                                 # public/ → ветка gh-pages
 ```
 
-Сайт: `https://<user>.github.io/gymbook/`. Первый запуск workflow можно сделать вручную:
-Actions → «Deploy GymBook to GitHub Pages» → Run workflow.
+Включить Pages (один раз):
 
-Если не хотите использовать Actions: скопируйте содержимое `public/` в корень репозитория
-(или в ветку `gh-pages`) и в Settings → Pages выберите «Deploy from a branch».
-Особенность GitHub Pages: своих заголовков кэширования нет, `404.html` уже перенаправляет
-на главную; PWA работает, потому что Pages отдаёт HTTPS.
+```powershell
+'{"source":{"branch":"gh-pages","path":"/"}}' | Set-Content pages.json -Encoding utf8
+gh api --method POST repos/tukhatukha01-lang/gymbook/pages --input pages.json
+Remove-Item pages.json
+```
+
+Или в браузере: Settings → Pages → Source: **Deploy from a branch** → `gh-pages` / `/ (root)`.
+
+Сайт: `https://<user>.github.io/gymbook/`. Обновление после правок:
+
+```powershell
+git add . && git commit -m "..." && git push
+npm run deploy
+```
+
+Файл `public/.nojekyll` отключает обработку Jekyll, чтобы GitHub отдавал статику как есть.
+Своих заголовков кэширования у Pages нет, `404.html` перенаправляет на главную;
+PWA работает, потому что Pages отдаёт HTTPS.
 
 ---
 
